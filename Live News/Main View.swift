@@ -14,13 +14,17 @@ class Main_View: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet weak var TableView: UITableView!
     
+    
     var post = [String]()
     var ref:DatabaseReference?
     var databaseHandel:DatabaseHandle?
     
+
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return post.count
+         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,6 +42,7 @@ class Main_View: UIViewController,UITableViewDataSource,UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    
         
         TableView.delegate = self
         TableView.dataSource = self
